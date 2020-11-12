@@ -16,7 +16,6 @@ import javafx.scene.text.Font;
 import javafx.stage.Stage;
 
 /**
- * Assignment 4
  *
  * FXML Controller class
  *

@@ -7,7 +7,6 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 
 /**
- * Assignment 4
  *
  * Program : Developing a class that models a ordering pet food
  *
