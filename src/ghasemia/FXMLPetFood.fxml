@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<GridPane vgap="5" hgap="5"
+          prefHeight="240.0" prefWidth="290.0" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ghasemia.PetFoodController">
+
+    <columnConstraints>
+        <ColumnConstraints hgrow="NEVER" />
+        <ColumnConstraints hgrow="ALWAYS" />
+        <ColumnConstraints hgrow="ALWAYS" />
+    </columnConstraints>
+    
+    <padding>
+        <Insets top="5" left="5" right="5" bottom="5" />
+    </padding>
+    
+    <fx:define>
+        <ToggleGroup fx:id="grpRadioButton"/>
+    </fx:define>
+    
+    <children>
+        
+        <Label fx:id="lblKg" text="# Kg: " GridPane.rowIndex="0" 
+               GridPane.columnIndex="0"/>
+    
+        <TextField fx:id="txtKgField" GridPane.rowIndex="0" 
+                   GridPane.columnIndex="1" />
+    
+        <Label fx:id="lblChooseFlavour" text="Choose Flavour: " 
+               GridPane.rowIndex="0" GridPane.columnIndex="2"/>
+    
+        <CheckBox fx:id="chkCustomName" text="Custom _Name"
+                  GridPane.rowIndex="1" GridPane.columnIndex="0"
+                  GridPane.columnSpan="2" onAction="#check"/>
+    
+        <TextField fx:id="txtCustomNameField" GridPane.rowIndex="2" 
+                   GridPane.columnSpan="2" editable="false"/>
+    
+        <Button fx:id="btnCalculate" text="_Calculate" GridPane.rowIndex="3" 
+                GridPane.columnIndex="0" GridPane.columnSpan="2" 
+                GridPane.halignment="CENTER" onAction="#calculate"/>
+    
+        <TextArea fx:id="txtOutPut" prefColumnCount="25" prefRowCount="4" 
+                  GridPane.rowIndex="4" GridPane.columnIndex="0" 
+                  GridPane.columnSpan="3" editable="false" wrapText="true"/>
+    
+        <RadioButton fx:id="optDuck"  text="_Duck" GridPane.rowIndex="1" 
+                     GridPane.columnIndex="2" toggleGroup="$grpRadioButton" 
+                     selected="true"/>
+    
+        <RadioButton fx:id="optHalibut" text="_Halibut" GridPane.rowIndex="2" 
+                     GridPane.columnIndex="2" toggleGroup="$grpRadioButton"/>
+    
+        <RadioButton fx:id="optBison" text="_Bison" GridPane.rowIndex="3" 
+                     GridPane.columnIndex="2" toggleGroup="$grpRadioButton"/>
+    
+        <Button fx:id="btnExit" text="E_xit" GridPane.rowIndex="5" 
+                GridPane.columnIndex="2" GridPane.halignment="RIGHT" 
+                onAction="#exit" />
+    
+    </children>
+</GridPane>
